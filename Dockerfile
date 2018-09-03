@@ -10,7 +10,8 @@ FROM centos
 MAINTAINER mkieboom @ mapr.com (code has gracefully been provided by mkieboom)
 
 # Install and run Nginx
-RUN yum install -y epel-release nginx
+RUN yum install -y epel-release
+RUN yum install -y nginx
 
 # Allow directory browsing
 RUN sed -ie "s|location / {|location / { autoindex on;|g" /etc/nginx/nginx.conf
